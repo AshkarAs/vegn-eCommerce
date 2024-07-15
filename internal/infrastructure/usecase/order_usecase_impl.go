@@ -202,14 +202,6 @@ func (r *OrderUseCase) GetAllOrders(userId *string) (*[]responsemodels.OrderDeta
 	return verResSlice, nil
 }
 
-// func (r *OrderUseCase) AllOrdersForARestaurant(restaurantId *string) (*[]responsemodels.OrderDetailsResponse, error) {
-// 	orderResSlice, err := r.OrderRepo.OrdersForRestaurantById(restaurantId)
-// 	if err != nil {
-// 		return orderResSlice, err
-// 	}
-
-//		return orderResSlice, nil
-//	}
 func (r *OrderUseCase) AllOrdersForARestaurant(restaurantId *string) (*[]responsemodels.OrderResponseX, error) {
 	var returnSlice []responsemodels.OrderResponseX
 

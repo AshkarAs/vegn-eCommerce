@@ -43,7 +43,6 @@ func (u *UserHandler) UserSignUp(c *gin.Context) {
 
 	response := responsemodels.Responses(http.StatusOK, "signup success", resSignup, nil)
 	c.JSON(http.StatusOK, response)
-
 }
 
 //	@Summary		UserOTPVerication

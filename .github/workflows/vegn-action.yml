@@ -40,6 +40,7 @@ jobs:
           cd vegn-eCommerce/
           git pull 
           make build
+          sudo 
           sudo systemctl restart vegnSourceCodeRunner.service
 
     - name: Deploy to vegn-eCommerceLB

@@ -1,20 +1,18 @@
-GO=go
-
 run:
-	${GO} run ./cmd
+	go run ./cmd
 
 build:
-	${GO} build -o ./cmd/vegnExecutableFile ./cmd/main.go
+	go build -o ./cmd/vegnExecutableFile ./cmd/main.go
 
 buildrun:
 	./cmd/vegnExecutableFile
 
 swaggo:
-	swag init -g ./internal/infrastructure/api/server.go
+	swag init -g ./cmd/main.go
 
 swaggoformat:
 	swag fmt	
 
 test:
-	${GO} test -v ./...
+	go test -v ./...
 		

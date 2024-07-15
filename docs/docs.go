@@ -2333,7 +2333,7 @@ const docTemplate = `{
         "responsemodels.Response": {
             "type": "object",
             "properties": {
-                "after exicution": {},
+                "after execution": {},
                 "error": {},
                 "message": {
                     "type": "string"
@@ -2343,17 +2343,49 @@ const docTemplate = `{
                 }
             }
         }
+    },
+    "securityDefinitions": {
+        "AdminRefTokenAuth": {
+            "type": "apiKey",
+            "name": "refreshtoken",
+            "in": "header"
+        },
+        "OtpTempTokenAuth": {
+            "type": "apiKey",
+            "name": "Authorizations",
+            "in": "header"
+        },
+        "RestaurantAuthTokenAuth": {
+            "type": "apiKey",
+            "name": "accesstoken",
+            "in": "header"
+        },
+        "RestaurantRefTokenAuth": {
+            "type": "apiKey",
+            "name": "refreshtoken",
+            "in": "header"
+        },
+        "UserAuthTokenAuth": {
+            "type": "apiKey",
+            "name": "accesstoken",
+            "in": "header"
+        },
+        "UserRefTokenAuth": {
+            "type": "apiKey",
+            "name": "refreshtoken",
+            "in": "header"
+        }
     }
 }`
 
 // SwaggerInfo holds exported Swagger Info so clients can modify it
 var SwaggerInfo = &swag.Spec{
-	Version:          "",
+	Version:          "1.0",
 	Host:             "",
 	BasePath:         "",
 	Schemes:          []string{},
-	Title:            "",
-	Description:      "",
+	Title:            "Go + Gin Veg*n.",
+	Description:      "Online Veg Food Delivery.",
 	InfoInstanceName: "swagger",
 	SwaggerTemplate:  docTemplate,
 	LeftDelim:        "{{",

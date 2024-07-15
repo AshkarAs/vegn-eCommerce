@@ -352,7 +352,7 @@ definitions:
     type: object
   responsemodels.Response:
     properties:
-      after exicution: {}
+      after execution: {}
       error: {}
       message:
         type: string
@@ -361,6 +361,9 @@ definitions:
     type: object
 info:
   contact: {}
+  description: Online Veg Food Delivery.
+  title: Go + Gin Veg*n.
+  version: "1.0"
 paths:
   /address:
     get:
@@ -1498,4 +1501,29 @@ paths:
       summary: UserOTPVerication
       tags:
       - User
+securityDefinitions:
+  AdminRefTokenAuth:
+    in: header
+    name: refreshtoken
+    type: apiKey
+  OtpTempTokenAuth:
+    in: header
+    name: Authorizations
+    type: apiKey
+  RestaurantAuthTokenAuth:
+    in: header
+    name: accesstoken
+    type: apiKey
+  RestaurantRefTokenAuth:
+    in: header
+    name: refreshtoken
+    type: apiKey
+  UserAuthTokenAuth:
+    in: header
+    name: accesstoken
+    type: apiKey
+  UserRefTokenAuth:
+    in: header
+    name: refreshtoken
+    type: apiKey
 swagger: "2.0"

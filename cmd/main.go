@@ -31,7 +31,6 @@ import (
 //	@contact.name				API Support
 //	@host						localhost:8080
 //	@BasePath					/
-
 func main() {
 	config, configErr := config.LoadConfig()
 	if configErr != nil {

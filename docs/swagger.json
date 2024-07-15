@@ -1,7 +1,10 @@
 {
     "swagger": "2.0",
     "info": {
-        "contact": {}
+        "description": "Online Veg Food Delivery.",
+        "title": "Go + Gin Veg*n.",
+        "contact": {},
+        "version": "1.0"
     },
     "paths": {
         "/address": {
@@ -2322,7 +2325,7 @@
         "responsemodels.Response": {
             "type": "object",
             "properties": {
-                "after exicution": {},
+                "after execution": {},
                 "error": {},
                 "message": {
                     "type": "string"
@@ -2331,6 +2334,38 @@
                     "type": "integer"
                 }
             }
+        }
+    },
+    "securityDefinitions": {
+        "AdminRefTokenAuth": {
+            "type": "apiKey",
+            "name": "refreshtoken",
+            "in": "header"
+        },
+        "OtpTempTokenAuth": {
+            "type": "apiKey",
+            "name": "Authorizations",
+            "in": "header"
+        },
+        "RestaurantAuthTokenAuth": {
+            "type": "apiKey",
+            "name": "accesstoken",
+            "in": "header"
+        },
+        "RestaurantRefTokenAuth": {
+            "type": "apiKey",
+            "name": "refreshtoken",
+            "in": "header"
+        },
+        "UserAuthTokenAuth": {
+            "type": "apiKey",
+            "name": "accesstoken",
+            "in": "header"
+        },
+        "UserRefTokenAuth": {
+            "type": "apiKey",
+            "name": "refreshtoken",
+            "in": "header"
         }
     }
 }

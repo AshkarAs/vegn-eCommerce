@@ -109,13 +109,13 @@ func (r *TokenRequirements) UserAuthorization(c *gin.Context) {
 
 		_, err1 := r.JWTUseCase.GetUserStatForGeneratingAccessToken(&userId)
 		if err1 != nil {
-			c.JSON(http.StatusUnauthorized, err.Error())
+			c.JSON(http.StatusUnauthorized, err1.Error())
 			c.Abort()
 			return
 		}
 		newAcessToken, err2 := jwttoken.GenerateAcessToken(r.keys.UserSecurityKey, userId)
 		if err2 != nil {
-			c.JSON(http.StatusUnauthorized, err.Error())
+			c.JSON(http.StatusUnauthorized, err2.Error())
 			c.Abort()
 			return
 		}
